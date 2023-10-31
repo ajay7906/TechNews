@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous" />
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="menu-btn">
+    <i class="fas fa-bars fa-2x"></i>
+  </div>
+
+
+  <header>
+    <nav class="nav-main">
+      <img src="https://github.com/FaztWeb/technews-html/blob/master/img/brand.png?raw=true" alt="TechNews Logo"
+        class="nav-brand" />
+      <ul class="nav-menu">
+        <li>
+          <a href="#">Webdev</a>
+        </li>
+        <li>
+          <a href="#">Blockchain</a>
+        </li>
+        <li>
+          <a href="#">Artificial Intelligence</a>
+        </li>
+        <li>
+          <a href="#">Machine Learning</a>
+        </li>
+        <li>
+          <a href="#">Quantun computing</a>
+        </li>
+        <li>
+          <a href="#">Startup</a>
+        </li>
+        <li>
+          <a href="#">More</a>
+        </li>
+      </ul>
+      <ul class="nav-menu-right">
+        <li>
+          <a href="#">
+            <i class="fas fa-search"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <hr />
+  </header>
+
+
+  <section class="showcase">
+    <h2>Check news today</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias porro
+      corrupti aliquam tempore magni totam nostrum reiciendis consequatur
+      ex, sapiente illo? Dolorem error quisquam necessitatibus culpa,
+      dolores suscipit numquam natus?
+    </p>
+    <a href="#" class="btn">Read all tech news <i class="fas fa-angle-double-right"></i></a>
+  </section>
+
+
+  <main>
+    <div class="cards-container container flex" id="cards-container">
+
+    </div>
+  </main>
+
+  <template id="template-news-card">
+    <div class="card">
+      <div class="card-header">
+        <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
+      </div>
+      <div class="card-content">
+        <h3 id="news-title">This is the Title</h3>
+        <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+        <p class="news-desc" id="news-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe
+          quis voluptatum quisquam vitae doloremque facilis molestias quae ratione cumque!</p>
+      </div>
+    </div>
+  </template>
+  <script>
+    document.querySelector(".menu-btn").addEventListener("click", () => {
+      document.querySelector(".nav-menu").classList.toggle("show");
+    });
+
+    ScrollReveal().reveal(".showcase");
+    ScrollReveal().reveal(".news-cards", { delay: 300 });
+    ScrollReveal().reveal(".cards-banner-one", { delay: 300 });
+    ScrollReveal().reveal(".cards-banner-two", { delay: 300 });
+  </script>
+  <script src="script.js"></script>
+</body>
+
+</html> 
